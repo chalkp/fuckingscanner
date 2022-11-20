@@ -3,6 +3,14 @@ const { servers } = require('./scan.json');
 
 const fs = require('fs');
 
+fs.writeFile('output.txt', `\n` ,(err) => {
+  if (err) throw err;
+});
+
+fs.writeFile('found.txt', `\n` ,(err) => {
+  if (err) throw err;
+});
+
 servers.forEach(current => {
   let p = current.ports.map(a => a.port);
   p.forEach(po => {
@@ -11,11 +19,11 @@ servers.forEach(current => {
       try {
         if(typeof err === 'undefined' || err === null) {
           console.log(`${current.ip} => description: ${res.description.text}`);
-          fs.writeFile('output.txt', `${current.ip} => description: ${res.description.text}` ,(err) => {
+          fs.appendFile('output.txt', `${current.ip} => description: ${res.description.text}\n` ,(err) => {
             if (err) throw err;
           });
           if(res.description.text.includes("LiveOverflow")) {
-            fs.writeFile('found.txt', `${current.ip} => description: ${res.description.text}` ,(err) => {
+            fs.appendFile('found.txt', `${current.ip} => description: ${res.description.text}\n` ,(err) => {
               if (err) throw err;
             });
           }
