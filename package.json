@@ -1,0 +1,11 @@
+{
+  "name": "mclister",
+  "version": "1.0.0",
+  "description": "lists the detail of all the fucking servers from masscan output.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chalk, soysauce and stax",
+  "license": "MIT"
+}
