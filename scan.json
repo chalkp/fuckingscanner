@@ -1,4 +1,5 @@
-[
+{
+"servers":[
 {   "ip": "5.9.80.21",   "timestamp": "1668000415", "ports": [ {"port": 25565, "proto": "tcp", "status": "open", "reason": "syn-ack", "ttl": 56} ] }
 ,
 {   "ip": "176.9.38.219",   "timestamp": "1668000415", "ports": [ {"port": 25565, "proto": "tcp", "status": "open", "reason": "syn-ack", "ttl": 56} ] }
@@ -13065,3 +13066,4 @@
 ,
 {   "ip": "213.239.202.221",   "timestamp": "1668000959", "ports": [ {"port": 25565, "proto": "tcp", "status": "open", "reason": "syn-ack", "ttl": 56} ] }
 ]
+}
